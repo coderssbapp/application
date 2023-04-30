@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "hello-expo",
-    "slug": "snack-3fd3f3ee-d860-4d0b-8b1f-f68fdb021a3b",
+    "name": "mainscreen",
+    "slug": "snack-72724646-0188-4e82-8fd7-7c1f29c2b8ff",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,7 +28,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "description": "A native component that will render on iOS, Android, and web."
+    }
   }
 }

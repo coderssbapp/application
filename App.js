@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Constants from 'expo-constants';
@@ -29,35 +29,50 @@ function HomeScreen({ navigation }) {
     <View style={styles.container}>
       <Text style={styles.paragraph}>Home Screen</Text>
       <View style={styles.buttonContainer}>
-        <Text
-          style={styles.button}
-          onPress={() => navigation.navigate('Calendar')}
-        >
-          Go to Calendar
-        </Text>
-        <Text
-          style={styles.button}
-          onPress={() => navigation.navigate('Notes')}
-        >
-          Go to Notes
-        </Text>
-        <Text
-          style={styles.button}
-          onPress={() => navigation.navigate('Weather')}
-        >
-          Go to Weather
-        </Text>
-        <Text
-          style={styles.button}
-          onPress={() => navigation.navigate('Calories')}
-        >
-          Go to Calorie Tracker
-        </Text>
+        <View style={styles.buttonRow}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate('Calendar')}
+          >
+            <Image
+              style={styles.buttonImage}
+              source={require('./images/calendar-icon.png')}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate('Notes')}
+          >
+            <Image
+              style={styles.buttonImage}
+              source={require('./images/notes-icon.png')}
+            />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.buttonRow}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate('Weather')}
+          >
+            <Image
+              style={styles.buttonImage}
+              source={require('./images/weather-icon.png')}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate('Calories')}
+          >
+            <Image
+              style={styles.buttonImage}
+              source={require('./images/calorie-icon.png')}
+            />
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -74,14 +89,28 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   buttonContainer: {
+    flex: 1,
     flexDirection: 'column',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 150,
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 10,
   },
   button: {
-    fontSize: 18,
-    padding: 10,
-    backgroundColor: 'lightblue',
-    borderRadius: 5,
-    width: '100%',
+    width: 150,
+    height: 150,
+    resizeMode: 'contain',
+    margin: 10,
+  },
+  buttonImage: {
+    flex: 1,
+    width: undefined,
+    height: undefined,
+    resizeMode: 'contain',
   },
 });

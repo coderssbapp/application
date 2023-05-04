@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { styles } from './weatherstyles';
 import { Text, View, TextInput, Button, Image, FlatList, AsyncStorage, TouchableOpacity, KeyboardAvoidingView, ScrollView } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
-import { Calendar } from './Calendar';
 
 const API_KEY = '397a10ef3f414514a4b23717232504';
 
@@ -12,7 +11,7 @@ function App() {
   const [defaultCity, setDefaultCity] = useState('');
   const [defaultCityWeather, setDefaultCityWeather] = useState(null);
   const [cityList, setCityList] = useState([]);
-
+  
   useEffect(() => {
     async function getDefaultCity() {
       try {
@@ -84,6 +83,7 @@ function App() {
 
 
   return (
+  <KeyboardAvoidingView style={styles.container} behavior="padding">
   <View style={styles.container}>
     <View style={styles.defaultCityContainer}>
       {defaultCityWeather && (
@@ -143,6 +143,7 @@ function App() {
       </View>
     )}
   </View>
+  </KeyboardAvoidingView>
 );
 }
 

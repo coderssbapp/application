@@ -3,38 +3,77 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 70,
     backgroundColor: '#fff',
-    alignItems: 'flex-start',
+    alignItems: 'stretch',
+    justifyContent: 'flex-start',
+    padding: 10,
   },
   inputContainer: {
+    marginBottom: 10,
+  },
+  titleInput: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  bodyInput: {
+    fontSize: 16,
+    marginBottom: 10,
+    height: 100,
+    textAlignVertical: 'top',
+  },
+  addButton: {
+    backgroundColor: '#008000',
+    padding: 10,
+    borderRadius: 5,
+    alignSelf: 'flex-end',
+  },
+  addButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  notesContainer: {
+    flex: 1,
     marginBottom: 20,
   },
-  input: {
-    borderWidth: 1,
-    borderColor: '#ddd',
+  noteContainer: {
+    backgroundColor: '#f0f0f0',
     padding: 10,
-    fontSize: 18,
-    borderRadius: 6,
     marginBottom: 10,
-  },
-  note: {
-    borderWidth: 2,
-    borderColor: '#ddd',
-    borderTopWidth: 2,
-    borderRadius: 6,
-    padding: 23,
-    marginBottom: 10,
-    marginTop: 10, 
-    borderRightWidth: 2,
-    borderRightColor: '#ddd',
+    borderRadius: 5,
   },
   noteTitle: {
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 5,
   },
   noteBody: {
-    fontSize: 18,
+    fontSize: 16,
+    marginBottom: 10,
   },
-})
+  deleteButton: {
+    backgroundColor: '#ff0000',
+    padding: 5,
+    borderRadius: 5,
+    alignSelf: 'flex-end',
+  },
+  deleteButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  editButton: {
+    backgroundColor: '#ff0000',
+    padding: 5,
+    borderRadius: 5,
+    alignSelf: 'flex-start',
+    marginTop: 3,
+    marginBottom: -30,
+  },
+  editButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+});

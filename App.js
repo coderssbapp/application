@@ -27,7 +27,7 @@ export default function App() {
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.paragraph}>Home Screen</Text>
+      <Text style={styles.paragraph}>Busy SB</Text>
       <View style={styles.buttonContainer}>
         <View style={styles.buttonRow}>
           <TouchableOpacity

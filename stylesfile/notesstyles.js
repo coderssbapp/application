@@ -64,7 +64,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   editButton: {
-    backgroundColor: '#ff0000',
+    backgroundColor: '#0080ff',
     padding: 5,
     borderRadius: 5,
     alignSelf: 'flex-start',

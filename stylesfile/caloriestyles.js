@@ -38,11 +38,13 @@ export const styles = StyleSheet.create({
     marginBottom: 16,
   },
   dropdownButton: {
-  backgroundColor: '#f0f0f0',
-  paddingVertical: 8,
-  paddingHorizontal: 16,
-  borderRadius: 4,
-  marginBottom: 8,
+    backgroundColor: '#f0f0f0',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 4,
+    marginBottom: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
 },
 dropdownList: {
   height: 100,
@@ -63,15 +65,21 @@ dropdownButtonText: {
     fontWeight: 'bold',
   },
   clearButtonContainer: { 
-    marginTop: 20,
+    width: 225,
+    marginTop: 10,
     backgroundColor: '#f0f0f0',
     padding: 16,
     borderRadius: 4,
   },
   buttonContainer:{
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 225,
     marginTop: 20,
     backgroundColor: '#f0f0f0',
     padding: 16,
     borderRadius: 4,
+    marginBottom: 10,
+    position: 'fixed',
   }
 });

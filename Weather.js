@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { styles } from './weatherstyles';
+import { styles } from './stylesfile/weatherstyles';
 import { Text, View, TextInput, Button, Image, FlatList, AsyncStorage, TouchableOpacity, KeyboardAvoidingView, ScrollView } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -100,7 +100,6 @@ function App() {
       )}
       <Text style={styles.defaultCityText}>Current City: {defaultCity}</Text>
     </View>
-    <Text style={styles.title}>Weather</Text>
     <View style={styles.searchContainer}>
       <TextInput
         style={styles.input}
@@ -119,17 +118,18 @@ function App() {
         />
       )}
     </View>
-    <View style={styles.buttonContainer}>
-      <Button title="View Weather" onPress={fetchWeather} />
-      {defaultCity === city ? (
-        <View style={styles.setDefaultContainer}>
-          <MaterialIcons name="location-on" size={24} color ="#fff" />
-          <Text style={styles.setDefaultText}></Text>
-        </View>
-        ) : (
-      <Button title="Set as Current City" onPress={handleSetDefaultCity} />
-        )}
+    <View style={styles.buttonGroupContainer}>
+  <Button title="View Weather" onPress={fetchWeather} style={{ marginBottom: 30 }} />
+  {defaultCity === city ? (
+    <View style={styles.setDefaultContainer}>
+      <MaterialIcons name="location-on" size={24} color ="#fff" />
+      <Text style={styles.setDefaultText}></Text>
     </View>
+  ) : (
+    <Button title="Set as Current City" onPress={handleSetDefaultCity} />
+  )}
+</View>
+
     {weather && (
       <View style={styles.weatherContainer}>
         <Image

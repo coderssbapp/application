@@ -1,4 +1,4 @@
-import { styles } from './notesstyles';
+import { styles } from './stylesfile/notesstyles';
 import { Calendar } from './Calendar';
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, ScrollView, AsyncStorage, Keyboard } from 'react-native';

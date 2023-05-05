@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, ScrollView, AsyncStorage } from 'react-native';
 import { Calendar } from 'react-native-calendars';
-import { styles } from './calendarstyles';
+import { styles } from './stylesfile/calendarstyles';
 
 const App = () => {
   const [selectedDate, setSelectedDate] = useState('');
@@ -63,7 +63,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Calendar onDayPress={onDayPress} />
-      <Text style={styles.text}>Selected Date: {selectedDate}</Text>
+      <Text style={[styles.text, { marginLeft: 10, marginTop: 7 }]}>Selected Date: {selectedDate}</Text>
       <TextInput
         style={styles.input}
         onChangeText={text => setText(text)}
